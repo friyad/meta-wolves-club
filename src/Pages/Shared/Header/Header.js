@@ -26,7 +26,7 @@ const Header = () => {
     const links = (
         <ul className="">
             <li key='Buy-a-Wolf'>
-                <a href="#">Buy a Wolf</a>
+                <a href="#joinThePack">Buy a Wolf</a>
             </li>
             <li key='The-CWC'>
                 <a href="#">The CWC</a>

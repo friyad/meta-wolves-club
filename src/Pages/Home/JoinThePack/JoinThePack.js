@@ -1,11 +1,10 @@
 import React from 'react';
-import minas from '../../../images/icons/-.png'
-import plus from '../../../images/icons/+.png'
 
 const JoinThePack = () => {
     return (
-        <div className="mt-40">
-            <h1 className="text-5xl font-miedinger mb-12">JOIN THE PACK</h1>
+        <div className="xs:mt-20 lg:mt-40" id="joinThePack">
+            <h1 className="xs:text-3xl lg:text-5xl font-miedinger mb-12
+            ">JOIN THE PACK</h1>
 
             <div className="p-12 rounded-3xl max-w-2xl mx-auto"
                 style={{ backgroundColor: '#0C0E4E' }}>
@@ -49,7 +48,6 @@ const JoinThePack = () => {
             <button className="px-12 py-2 rounded-full btnShadow text-xl mt-8">
                 MINT
             </button>
-
         </div>
     );
 };
