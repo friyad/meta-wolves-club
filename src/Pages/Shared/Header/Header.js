@@ -3,113 +3,144 @@ import logo from '../../../images/logo.png'
 import twitterIcon from '../../../images/icons/Twitter.png'
 import discordIcon from '../../../images/icons/Discord.png'
 import instragramIcon from '../../../images/icons/Instagram.png'
-
-import ResponsiveHeader from 'dna-responsive-nav'
-import 'semantic-ui-css/semantic.min.css'
-import 'dna-responsive-nav/dist/dna-rn.css'
+import { CSSTransition } from 'react-transition-group';
 
 const Header = () => {
-    const [headerBg, setHeaderBg] = useState(false)
-
-    const handleHeaderBG = e => {
-        if (window.scrollY >= 500) {
-            setHeaderBg(true)
-        }
-        else {
-            setHeaderBg(false)
-        }
-    }
-    window.addEventListener('scroll', handleHeaderBG)
-
-
-    const links = (
-        <ul className="">
-            <li key='Buy-a-Wolf'>
-                <a href="#joinThePack">Buy a Wolf</a>
-            </li>
-            <li key='The-CWC'>
-                <a href="#theCWC">The CWC</a>
-            </li>
-            <li key='REWARD'>
-                <a href="#rewards">REWARD</a>
-            </li>
-            <li key='Meet-the-Wolves'>
-                <a href="#MeetTheWolves">Meet the Wolves</a>
-            </li>
-            <li key='Roadmap'>
-                <a href="#Roadmap">Roadmap</a>
-            </li>
-            <li key='Team'>
-                <a href="#team">Team</a>
-            </li>
-            <li key='FAQ'>
-                <a href="#faq">FAQ</a>
-            </li>
-            <li key='icons' className="ml-10 lg:mr-16 2xl:mr-0">
-                <a href="#" className="inline-block rounded-full">
-                    <img src={twitterIcon} alt="" />
-                </a>
-                <a href="#" className="inline-block rounded-full ml-6">
-                    <img src={discordIcon} alt="" />
-                </a>
-                <a href="#" className="inline-block rounded-full ml-6">
-                    <img src={instragramIcon} alt="" />
-                </a>
-            </li>
-            <li className="3xl:ml-16">
-                <button className="px-6 py-3 lg:text-xl rounded-full font-abel"
-                    style={{ backgroundColor: '#5317FF' }}>
-                    Open Sea
-                </button>
-                <button className="px-6 py-3 ml-3 lg:text-xl rounded-full font-abel"
-                    style={{ backgroundColor: '#FD9535' }}>
-                    Connect Metamask
-                </button>
-            </li>
-        </ul>
-    )
-
+    const [menuOpen, setMenuOpen] = useState(false)
 
     return (
-        <div className="lg:fixed xs:sticky xs:top-0 xs:w-full max-w-screen-3xl"
-            style={headerBg ? { backgroundColor: '#03031C', zIndex: 999999999 } : { zIndex: 999999999 }}>
-            <div className="xs:w-11/12 mx-auto">
-                <ResponsiveHeader
-                    links={links}
-                    logo={logo}
+        <div className="">
+            {/* For Large Devices------- */}
+            <nav className="lg:w-full max-w-screen-3xl absolute top-2 
+            xs:hidden lg:block">
+                <div className="lg:w-full 2xl:w-11/12 mx-auto py-2">
+                    <div className="mainNavStyle">
+                        <div className="mr-3">
+                            <a href="#">
+                                <img src={logo} alt="" className="lg:w-16 2xl:w-24" />
+                            </a>
+                        </div>
+                        <div className="flex mr-auto justify-between">
+                            <a className="navAstyle" href="#joinThePack">Buy a Wolf</a>
+                            <a className="navAstyle" href="#theCWC">The CWC</a>
+                            <a className="navAstyle" href="#rewards">REWARD</a>
+                            <a className="navAstyle" href="#MeetTheWolves">Meet the Wolves</a>
+                            <a className="navAstyle" href="#Roadmap">Roadmap</a>
+                            <a className="navAstyle" href="#team">Team</a>
+                            <a className="navAstyle" href="#faq">FAQ</a>
+                        </div>
+                        <div className="flex mr-auto">
+                            <a href="#" className="socialIconStyle">
+                                <img src={twitterIcon} alt="" className="lg:w-4 2xl:w-5" />
+                            </a>
+                            <a href="#" className="socialIconStyle">
+                                <img src={discordIcon} alt="" className="lg:w-4 2xl:w-5" />
+                            </a>
+                            <a href="#" className="socialIconStyle">
+                                <img src={instragramIcon} alt="" className="lg:w-4 2xl:w-5" />
+                            </a>
+                        </div>
+                        <div>
+                            <button
+                                className="rounded-full font-abel
+                                lg:px-3 lg:py-2 lg:text-base
+                                xl:px-4 xl:text-lg
+                                2xl:px-4 2xl:py-3 2xl:text-lg 2xl:font-bold
+                                "
+                                style={{ backgroundColor: '#5317FF' }}>
+                                Open Sea
+                            </button>
+                            <button
+                                className="rounded-full  font-abel
+                               lg:px-3 lg:py-2 lg:text-base lg:ml-3
+                               xl:px-4 xl:text-lg
+                                2xl:px-4 2xl:py-3 2xl:text-lg 2xl:ml-4 2xl:font-bold
+                                "
+                                style={{ backgroundColor: '#FD9535' }}>
+                                Connect Metamask
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </nav>
 
-                />
+
+
+            {/* Fot Mobile and Tablets---------- */}
+            <div className="lg:hidden relative">
+                <div
+                    className="p-2 fixed top-0 w-full px-10"
+                    style={{ backgroundColor: '#03031C', zIndex: 99999 }}>
+                    <div className="flex justify-center items-center">
+                        <div>
+                            <button onClick={() => setMenuOpen(!menuOpen)} className="text-white">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" fill="rgb(255, 255, 255)" height="24" viewBox="0 0 24 24"><path d="M24 6h-24v-4h24v4zm0 4h-24v4h24v-4zm0 8h-24v4h24v-4z" /></svg>
+                            </button>
+                        </div>
+                        <div className="flex-1 justify-center items-center flex">
+                            <a href="#">
+                                <img src={logo} alt="" className="w-14" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+                <CSSTransition
+                    in={menuOpen}
+                    unmountOnExit
+                    timeout={{ appear: 0, enter: 500, exit: 300 }}
+                    classNames="alert"
+                >
+                    <div
+                        className="fixed top-16 h-full w-full"
+                        style={{ backgroundColor: '#03031C', zIndex: 99999 }}>
+
+                        <div className="flex flex-col space-y-3  text-left p-5 px-9 ">
+                            <a className="smallNavAStyle" href="#joinThePack">Buy a Wolf</a>
+                            <a className="smallNavAStyle" href="#theCWC">The CWC</a>
+                            <a className="smallNavAStyle" href="#rewards">REWARD</a>
+                            <a className="smallNavAStyle" href="#MeetTheWolves">Meet the Wolves</a>
+                            <a className="smallNavAStyle" href="#Roadmap">Roadmap</a>
+                            <a className="smallNavAStyle" href="#team">Team</a>
+                            <a className="smallNavAStyle" href="#faq">FAQ</a>
+                            <div className="flex">
+                                <a href="#" className="smallNavAStyle mr-8">
+                                    <img src={twitterIcon} alt="" className="w-5" />
+                                </a>
+                                <a href="#" className="smallNavAStyle mr-8">
+                                    <img src={discordIcon} alt="" className="w-5" />
+                                </a>
+                                <a href="#" className="smallNavAStyle mr-8">
+                                    <img src={instragramIcon} alt="" className="w-5" />
+                                </a>
+                            </div>
+                            <div>
+                                <button
+                                    className="rounded-full font-abel
+                              xs:px-4 xs:py-3 md:px-8 md:text-xl xs:text-lg
+                                "
+                                    style={{ backgroundColor: '#5317FF' }}>
+                                    Open Sea
+                                </button>
+                                <button
+                                    className="rounded-full  font-abel ml-5
+                              xs:px-4 xs:py-3 md:px-8 md:text-xl xs:text-lg
+                                "
+                                    style={{ backgroundColor: '#FD9535' }}>
+                                    Connect Metamask
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </CSSTransition>
             </div>
         </div>
     );
 };
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* 
-  <CSSTransition
-                in={menuOpen}
-                unmountOnExit
-                timeout={{ appear: 0, enter: 800, exit: 800 }}
-                classNames="alert">
-                 */
 
 export default Header;

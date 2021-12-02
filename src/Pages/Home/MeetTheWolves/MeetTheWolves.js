@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Swiper, SwiperSlide } from "swiper/react";
 import 'swiper/swiper-bundle.min.css'
 import 'swiper/swiper.min.css'
@@ -18,6 +18,15 @@ SwiperCore.use([Pagination, Navigation]);
 
 const MeetTheWolves = () => {
     const wolfData = [wolf1, wolf2, wolf3, wolf4]
+    const [windowWidth, setWindoWidth] = useState(null)
+
+    window.onmousemove = function () {
+        checkWindowSize();
+    }
+    function checkWindowSize() {
+        setWindoWidth(window.innerWidth)
+    }
+
 
     return (
         <div className="mt-24 xs:w-11/12 mx-auto" id="MeetTheWolves">
@@ -25,7 +34,7 @@ const MeetTheWolves = () => {
             <hr className="border-2 rounded-full w-52 mt-1 mx-auto" style={{ borderColor: '#7165FF' }} />
 
             <div className="mt-20">
-                <Swiper slidesPerView={4} spaceBetween={5} slidesPerGroup={4} loop={true} loopFillGroupWithBlank={true} pagination={{
+                <Swiper slidesPerView={windowWidth < 768 ? 2 : 4} spaceBetween={5} slidesPerGroup={4} loop={true} loopFillGroupWithBlank={true} pagination={{
                     "clickable": true
                 }} navigation={true} className="mySwiper">
                     {wolfData.map(wolf =>

@@ -39,7 +39,7 @@ const Rewards = () => {
     // id, icon, icon, description
 
     return (
-        <div className="xs:mt-48 xl:mt-96" id="rewards">
+        <div className="xs:mt-48 xl:mt-80" id="rewards">
             <h1 className="font-miedinger xs:text-3xl lg:text-5xl m-0">REWARDS</h1>
             <hr className="border-2 rounded-full w-52 mt-1 mx-auto" style={{ borderColor: '#7165FF' }} />
 
@@ -51,8 +51,8 @@ const Rewards = () => {
                         style={{ background: 'rgba(255, 255, 255, 0.1)', border: '2px solid rgba(255, 255, 255, 0.2)' }}
                         className="rounded-2xl p-5 flex flex-col justify-center items-center"
                     >
-                        <img src={rewards.icon} alt="" />
-                        <h1 className="font-miedinger text-2xl font-thin">{rewards.title}</h1>
+                        <img src={rewards.icon} alt="" className="mb-3" />
+                        <h1 className="font-miedinger text-2xl font-thin my-3">{rewards.title}</h1>
                         <p className="text-base">{rewards.description}</p>
                     </div>
                 )
