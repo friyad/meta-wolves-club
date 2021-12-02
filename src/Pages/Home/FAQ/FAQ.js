@@ -72,7 +72,7 @@ const FAQ = () => {
                                         {faq.question}
                                     </label>
                                     <div className="tab-content overflow-hidden leading-normal">
-                                        <p className="p-5 text-base">{faq.answere}</p>
+                                        <p className="p-5 text-sm">{faq.answere}</p>
                                     </div>
                                 </div>
                             )

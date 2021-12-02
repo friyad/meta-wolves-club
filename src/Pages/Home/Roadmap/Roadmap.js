@@ -25,11 +25,11 @@ const Roadmap = () => {
                     xs:left-5 md:left-9"
                 ></div>
                 {roadmapData.map(roadmap =>
-                    <div key={roadmap} className="flex justify-start items-start mt-12">
+                    <div key={roadmap} className="flex justify-start items-start mt-12 roadmapOverflow">
                         <div className="roadMapList ">
                             <p>{('0' + (roadmapData.indexOf(roadmap) + 1)).slice(-2)}</p>
                         </div>
-                        <p className="ml-10 text-left">{roadmap}</p>
+                        <p className="xs:ml-4 md:ml-10 text-left xs:text-sm md:text-base">{roadmap}</p>
                     </div>
                 )
                 }

@@ -11,11 +11,11 @@ const TopBanner = () => {
                 md:text-5xl
                 lg:text-6xl
                 xl:text-7xl
-                2xl:text-8xl">
+                ">
                     meta <br />
                     <p className="mt-5"> WOLves CLUB</p>
                 </h1>
-                <div className="xs:mt-4 md:mt-8">
+                <div className="xs:mt-4 md:mt-8 xl:mt-14">
                     <button
                         className="rounded-full font-abel
                         xs:px-4 xs:py-2 xs:text-lg xs:mr-3

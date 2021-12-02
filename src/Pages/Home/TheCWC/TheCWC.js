@@ -8,7 +8,7 @@ const TheCWC = () => {
 
             <div className="text-left w-11/12 mx-auto mt-16 ">
                 <h3 className="font-miedinger text-2xl mb-5">ABOUT THE PROJECT</h3>
-                <p>CWC tokens are limited NFTs that will give to their owners exclusive access to our Membership Wolf Pack Landing Page where you will have access to unique features reserved only to our members and get the opportunity to win prestigious prices.
+                <p className="sm:text-sm lg:text-base">CWC tokens are limited NFTs that will give to their owners exclusive access to our Membership Wolf Pack Landing Page where you will have access to unique features reserved only to our members and get the opportunity to win prestigious prices.
                     <br /><br />
                     CWC NFTs are exclusive membership cards that will grant to their owners the access to all CWC benefits.
                     We have all seen projects like CryptoPunks having a huge success in the NFTs industry and if you have missed that boat, CWC Team is here to give you another chance to be part of a successful project projected in the Metaverse and VR trend that will be known worldwide in a blink of an eye!
