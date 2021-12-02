@@ -2,19 +2,32 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url(//db.onlinewebfonts.com/c/39ef4ceef70c633f89f5149378665c70?family=Miedinger);
 @import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+
+  @font-face {font-family: "Miedinger";
+    src: url("./MiedingerFont/@font-face/39ef4ceef70c633f89f5149378665c70.eot");
+    src: url("./MiedingerFont/@font-face/39ef4ceef70c633f89f5149378665c70.eot?#iefix")
+    format("embedded-opentype"),
+    url("./MiedingerFont/@font-face/39ef4ceef70c633f89f5149378665c70.woff2")
+    format("woff2"),
+    url("./MiedingerFont/@font-face/39ef4ceef70c633f89f5149378665c70.woff")
+    format("woff"),
+    url("./MiedingerFont/@font-face/39ef4ceef70c633f89f5149378665c70.ttf")
+    format("truetype"),
+    url("./MiedingerFont/@font-face/39ef4ceef70c633f89f5149378665c70.svg#Miedinger")
+    format("svg"); }
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
   'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
   sans-serif;
-  font-family: "Miedinger"!important;
-  -webkit-font-smoothing: antialiased!important;
-  -moz-osx-font-smoothing: grayscale!important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family:"Miedinger" !important;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace!important;
+    monospace;
 }
