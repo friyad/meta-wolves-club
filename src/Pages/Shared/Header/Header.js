@@ -36,7 +36,7 @@ const Header = () => {
             style={{ zIndex: 99999 }}>
 
             {/* For Large Devices------- */}
-            <nav className="lg:w-full max-w-screen-3xl absolute
+            <nav className="lg:w-full  absolute
             xs:hidden lg:block"
                 style={headerBg ? {
                     backgroundColor: '#03031C',

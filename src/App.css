@@ -33,7 +33,7 @@ height: 900px;
  }
  @media (min-width: 1280px) { 
   .topBanner{
-    height: 900px;
+    height: calc(min(100vh, 900px));
   }
  }
 
