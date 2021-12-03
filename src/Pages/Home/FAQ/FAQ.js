@@ -67,12 +67,12 @@ const FAQ = () => {
                                         id={`tab-multi-${faq.id}`}
                                         type="checkbox" name="tabs" />
                                     <label
-                                        className="block p-5 leading-normal cursor-pointer"
+                                        className="block p-5 leading-normal cursor-pointer xs:text-sm lg:text-base"
                                         htmlFor={`tab-multi-${faq.id}`}>
                                         {faq.question}
                                     </label>
                                     <div className="tab-content overflow-hidden leading-normal">
-                                        <p className="p-5 text-sm">{faq.answere}</p>
+                                        <p className="p-5 xs:text-xs lg:text-base">{faq.answere}</p>
                                     </div>
                                 </div>
                             )

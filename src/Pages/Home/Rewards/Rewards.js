@@ -53,7 +53,7 @@ const Rewards = () => {
                     >
                         <img src={rewards.icon} alt="" className="mb-3" />
                         <h1 className="font-miedinger text-2xl font-thin my-3">{rewards.title}</h1>
-                        <p className="text-sm">{rewards.description}</p>
+                        <p className="xs:text-sm lg:text-base">{rewards.description}</p>
                     </div>
                 )
                 }

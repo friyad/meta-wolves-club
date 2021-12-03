@@ -50,12 +50,14 @@ const Team = () => {
             <div className="grid xs:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-14
             justify-center items-center gap-16">
                 {teamData.map(teamMem =>
-                    <div key={teamMem.id} className="flex flex-col justify-center items-center">
-                        <img src={teamMem.photoUrl} alt="" />
-                        <h3 className="font-miedinger text-3xl m-0 mt-5">{teamMem.name}</h3>
-                        <p className="font-miedinger text-lg m-0">{teamMem.designation}</p>
+                    <div key={teamMem.id} className="flex flex-col justify-center items-center "
+                    >
+                        <img src={teamMem.photoUrl} alt="" className="w-56" />
+                        <div className="w-56">
+                            <h3 className="font-miedinger text-3xl m-0 mt-5">{teamMem.name}</h3>
+                            <p className="font-miedinger xs:text-sm lg:text-base m-0 mt-2">{teamMem.designation}</p>
+                        </div>
                     </div>
-
                 )
                 }
             </div>

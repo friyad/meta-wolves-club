@@ -37,6 +37,26 @@ height: 900px;
   }
  }
 
+
+
+
+ 
+ .stickyHeader-enter {
+  opacity: 0;
+}
+.stickyHeader-enter-active {
+  opacity: 1;
+  transition: opacity 300ms, transform 300ms;
+}
+.stickyHeader-exit {
+  opacity: 1;
+}
+.stickyHeader-exit-active {
+  opacity: 0;
+  transition: opacity 300ms, transform 300ms;
+}
+
+
  
  .alert-enter {
   opacity: 0;

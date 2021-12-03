@@ -46,7 +46,7 @@ const MeetTheWolves = () => {
                 </Swiper>
             </div>
 
-            <p className="font-extralight text-left text-xl mt-20">With over 10 designers and over 200 Accessory our CWC NFTs will blow off your mind!! Take a look of some of them. After the sale ends, there will be a Rarity Page where you will see the ranking and all the minted wolves. </p>
+            <p className="font-extralight text-left xs:text-sm lg:text-base mt-20">With over 10 designers and over 200 Accessory our CWC NFTs will blow off your mind!! Take a look of some of them. After the sale ends, there will be a Rarity Page where you will see the ranking and all the minted wolves. </p>
         </div>
     );
 };

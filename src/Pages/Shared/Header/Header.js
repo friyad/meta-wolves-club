@@ -8,13 +8,42 @@ import closeIcon from '../../../images/icons/close.svg'
 
 const Header = () => {
     const [menuOpen, setMenuOpen] = useState(false)
+    const [headerBg, setHeaderBg] = useState(false)
+
+
+    const [scrollValue, setScrollValue] = useState(0)
+    const handleWindowScroll = () => {
+        const newScrollValue = window.scrollY
+
+        if (scrollValue < newScrollValue) {
+            setHeaderBg(true)
+            setScrollValue(newScrollValue)
+        }
+        else if (scrollValue === newScrollValue) {
+            setHeaderBg(true)
+        }
+        else {
+            setHeaderBg(false)
+        }
+    }
+    window.addEventListener('scroll', handleWindowScroll)
+    // console.log(headerBg)
+
 
 
     return (
-        <div className="">
+        <div className={headerBg ? "sticky top-0" : "static"}
+            style={{ zIndex: 99999 }}>
+
             {/* For Large Devices------- */}
-            <nav className="lg:w-full max-w-screen-3xl absolute top-2 
-            xs:hidden lg:block">
+            <nav className="lg:w-full max-w-screen-3xl absolute
+            xs:hidden lg:block"
+                style={headerBg ? {
+                    backgroundColor: '#03031C',
+                    transition: 'backgroundColor 0.2s linear',
+                    zIndex: 99999
+                } : { transition: '0.2s linear', }}>
+
                 <div className="lg:w-full 2xl:w-11/12 mx-auto py-2">
                     <div className="mainNavStyle">
                         <div className="mr-3">

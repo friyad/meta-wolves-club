@@ -29,13 +29,13 @@ const Roadmap = () => {
                         <div className="roadMapList ">
                             <p>{('0' + (roadmapData.indexOf(roadmap) + 1)).slice(-2)}</p>
                         </div>
-                        <p className="xs:ml-4 md:ml-10 text-left xs:text-sm md:text-base">{roadmap}</p>
+                        <p className="xs:ml-4 md:ml-10 text-left xs:text-sm lg:text-base">{roadmap}</p>
                     </div>
                 )
                 }
             </div>
 
-            <p className="font-miedinger mt-10">…ok ok, we have shared already too much for the moment.. After the Private & Public Sale ends we will reveal all the 2022 Roadmap just to the members of course!</p>
+            <p className="font-miedinger mt-10 xs:text-sm lg:text-base">…ok ok, we have shared already too much for the moment.. After the Private & Public Sale ends we will reveal all the 2022 Roadmap just to the members of course!</p>
         </div>
     );
 };
