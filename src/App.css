@@ -107,9 +107,6 @@ height: 900px;
 
 
 
-
-
-
 @layer components{
     .mainNavStyle{
       @apply flex justify-between items-center lg:px-4 xl:px-8 2xl:px-0

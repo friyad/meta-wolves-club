@@ -150,14 +150,14 @@ const Header = () => {
                             <div>
                                 <button
                                     className="rounded-full font-abel
-                              xs:px-4 xs:py-2 md:px-8 md:text-xl xs:text-lg
+                              xs:px-2 sm:px-4 xs:py-2 md:px-8 md:text-xl  xs:text-xs sm:text-lg
                                 "
                                     style={{ backgroundColor: '#5317FF' }}>
                                     Open Sea
                                 </button>
                                 <button
-                                    className="rounded-full  font-abel ml-5
-                              xs:px-4 xs:py-2 md:px-8 md:text-xl xs:text-lg
+                                    className="rounded-full font-abel xs:ml-2 md:ml-5
+                              xs:px-2 sm:px-4 xs:py-2 md:px-8 md:text-xl xs:text-xs sm:text-lg
                                 "
                                     style={{ backgroundColor: '#FD9535' }}>
                                     Connect Metamask
