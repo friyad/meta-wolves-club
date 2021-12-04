@@ -37,19 +37,19 @@ const FAQ = () => {
         },
     ]
 
-    const myRadios = document.getElementsByName('tabs2');
-    let setCheck;
-    let x = 0;
-    for (x = 0; x < myRadios.length; x++) {
-        myRadios[x].onclick = function () {
-            if (setCheck != this) {
-                setCheck = this;
-            } else {
-                this.checked = false;
-                setCheck = null;
-            }
-        };
-    }
+    // const myRadios = document.getElementsByName('tabs2');
+    // let setCheck;
+    // let x = 0;
+    // for (x = 0; x < myRadios.length; x++) {
+    //     myRadios[x].onclick = function () {
+    //         if (setCheck != this) {
+    //             setCheck = this;
+    //         } else {
+    //             this.checked = false;
+    //             setCheck = null;
+    //         }
+    //     };
+    // }
 
     return (
         <div className="mt-44" id="faq">

@@ -13,13 +13,15 @@ const Home = () => {
     return (
         <div>
             <TopBanner />
-            <JoinThePack />
-            <TheCWC />
-            <Rewards />
-            <MeetTheWolves />
-            <Roadmap />
-            <Team />
-            <FAQ />
+            <div className="max-w-screen-3xl mx-auto ">
+                <JoinThePack />
+                <TheCWC />
+                <Rewards />
+                <MeetTheWolves />
+                <Roadmap />
+                <Team />
+                <FAQ />
+            </div>
         </div>
     );
 };

@@ -5,7 +5,7 @@ import Home from './Pages/Home/Home';
 
 function App() {
   return (
-    <div className="App max-w-screen-3xl mx-auto font-miedinger">
+    <div className="App font-miedinger">
       <Header />
       <Home />
       <Footer />
