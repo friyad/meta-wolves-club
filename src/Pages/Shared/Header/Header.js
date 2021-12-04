@@ -79,7 +79,7 @@ const Header = () => {
                                 2xl:px-4 2xl:py-3 2xl:text-lg 2xl:font-bold
                                 blueBtnShadow
                                 "
-                                style={{ backgroundColor: '#5317FF' }}>
+                                style={{ backgroundColor: '#2081E2' }}>
                                 Open Sea
                             </button>
                             <button
