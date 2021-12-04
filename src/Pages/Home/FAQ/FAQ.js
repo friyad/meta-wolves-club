@@ -61,7 +61,7 @@ const FAQ = () => {
 
                                     <label htmlFor={`tab-multi-${faq.id}`}
                                         className="absolute right-5 top-5 downArrow">
-                                        <img src={downArrow} alt="" className="w-5 " />
+                                        <img src={downArrow} alt="" className="w-5" />
                                     </label>
 
 
