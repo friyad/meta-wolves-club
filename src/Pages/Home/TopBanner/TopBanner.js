@@ -4,10 +4,10 @@ const TopBanner = () => {
 
     return (
         <div className="topBanner flex justify-center items-center xs:mt-14 md:mt-0">
-            <div className="xs:-mt-14 lg:-mt-38 xl:-mt-48">
+            <div className="xs:-mt-6 lg:-mt-10 xl:-mt-0">
                 <h1 className="font-miedinger
                 xs:text-2xl
-                md:text-5xl
+                md:text-4xl
                 lg:text-6xl
                 xl:text-7xl
                 ">
