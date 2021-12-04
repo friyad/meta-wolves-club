@@ -6,7 +6,12 @@ const JoinThePack = () => {
     const [timerMinutes, setTimerMinutes] = useState('00')
     const [timerSeconds, setTimerSeconds] = useState('00')
 
-
+    const [mintCount, setMintCount] = useState(1);
+    const handleMintCountChange = (value) => {
+        if(value >= 1 && value <= 10) {
+            setMintCount(value);
+        }
+    }
     let interval = useRef();
 
     const startTimer = () => {
@@ -83,10 +88,14 @@ const JoinThePack = () => {
             <div style={{ backgroundColor: '#010106', border: '1px solid #FF00F5' }}
                 className="xs:w-44 md:w-72 rounded-xl mx-auto mt-16 p-3 flex justify-around items-center">
                 <button className="xs:text-3xl md:text-6xl xs:w-8 md:w-14
-                flex justify-center items-center xs:h-8  md:h-14 rounded-full font-abel plushMinasBtnShadow">-</button>
-                <p className="xs:text-4xl md:text-6xl font-abel m-0">10</p>
+                flex justify-center items-center xs:h-8  md:h-14 rounded-full font-abel plushMinasBtnShadow"
+                onClick={() => handleMintCountChange(mintCount-1)}
+                >-</button>
+                <p className="xs:text-4xl md:text-6xl font-abel m-0">{mintCount}</p>
                 <button className="xs:text-3xl md:text-6xl xs:w-8 md:w-14
-                flex justify-center items-center xs:h-8  md:h-14 rounded-full font-abel plushMinasBtnShadow">+</button>
+                flex justify-center items-center xs:h-8  md:h-14 rounded-full font-abel plushMinasBtnShadow"
+                onClick={() => handleMintCountChange(mintCount+1)}
+                >+</button>
             </div>
 
             <button className="px-12 py-2 rounded-full pinkBtnShadow text-xl mt-8"
