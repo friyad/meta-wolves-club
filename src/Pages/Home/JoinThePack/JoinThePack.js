@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
+import calenderIcon from '../../../images/icons/Calender.svg'
 
 const JoinThePack = () => {
     const [timerDays, setTimerDays] = useState('00')
@@ -8,10 +9,12 @@ const JoinThePack = () => {
 
     const [mintCount, setMintCount] = useState(1);
     const handleMintCountChange = (value) => {
-        if(value >= 1 && value <= 10) {
+        if (value >= 1 && value <= 10) {
             setMintCount(value);
         }
     }
+
+
     let interval = useRef();
 
     const startTimer = () => {
@@ -82,19 +85,21 @@ const JoinThePack = () => {
                     className="px-16 py-2 pinkBtnShadow rounded-full font-abel text-lg"
                     style={{ backgroundColor: '#FF06AA' }}
                 >Join the Whitelist</button>
-                <p className="font-abel text-lg mt-3 font-thin">Add remainder to your calendar</p>
+                <p className="font-abel text-lg mt-3 font-thin flex justify-center items-center mx-auto">
+                    <img src={calenderIcon} alt="" className="w-5 mr-3" />
+                    Add remainder to your calendar</p>
             </div>
 
             <div style={{ backgroundColor: '#010106', border: '1px solid #FF00F5' }}
                 className="xs:w-44 md:w-72 rounded-xl mx-auto mt-16 p-3 flex justify-around items-center">
                 <button className="xs:text-3xl md:text-6xl xs:w-8 md:w-14
                 flex justify-center items-center xs:h-8  md:h-14 rounded-full font-abel plushMinasBtnShadow"
-                onClick={() => handleMintCountChange(mintCount-1)}
+                    onClick={() => handleMintCountChange(mintCount - 1)}
                 >-</button>
                 <p className="xs:text-4xl md:text-6xl font-abel m-0">{mintCount}</p>
                 <button className="xs:text-3xl md:text-6xl xs:w-8 md:w-14
                 flex justify-center items-center xs:h-8  md:h-14 rounded-full font-abel plushMinasBtnShadow"
-                onClick={() => handleMintCountChange(mintCount+1)}
+                    onClick={() => handleMintCountChange(mintCount + 1)}
                 >+</button>
             </div>
 
