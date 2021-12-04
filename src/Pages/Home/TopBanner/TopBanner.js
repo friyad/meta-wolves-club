@@ -16,7 +16,7 @@ const TopBanner = () => {
                 </h1>
                 <div className="xs:mt-4 md:mt-8 xl:mt-14">
                     <button
-                        className="rounded-full font-abel
+                        className="rounded-full font-abel pinkBtnShadow
                         xs:px-4 xs:py-2 xs:text-lg xs:mr-3
                         md:px-5 md:py-3 md:text-xl md:mr-8
                         lg:px-6 lg:py-3 lg:text-2xl lg:mr-14"
@@ -24,7 +24,7 @@ const TopBanner = () => {
                         DISCORD
                     </button>
                     <button
-                        className="rounded-full font-abel
+                        className="rounded-full font-abel pinkBtnShadow
                         xs:px-4 xs:py-2 xs:text-lg xs:mr-3
                         md:px-5 md:py-3 md:text-xl
                         lg:px-6 lg:py-3 lg:text-2xl"

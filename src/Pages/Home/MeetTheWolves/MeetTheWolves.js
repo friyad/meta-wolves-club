@@ -38,7 +38,7 @@ const MeetTheWolves = () => {
                     "clickable": true
                 }} navigation={true} className="mySwiper">
                     {wolfData.map(wolf =>
-                        <SwiperSlide>
+                        <SwiperSlide key={wolf}>
                             <img src={wolf} alt="" className="w-72" />
                         </SwiperSlide>
                     )

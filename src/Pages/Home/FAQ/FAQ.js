@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './FAQ.css'
+import downArrow from "../../../images/icons/down-arrow.svg"
 
 const FAQ = () => {
-
 
     const faqData = [
         {
@@ -37,19 +37,6 @@ const FAQ = () => {
         },
     ]
 
-    // const myRadios = document.getElementsByName('tabs2');
-    // let setCheck;
-    // let x = 0;
-    // for (x = 0; x < myRadios.length; x++) {
-    //     myRadios[x].onclick = function () {
-    //         if (setCheck != this) {
-    //             setCheck = this;
-    //         } else {
-    //             this.checked = false;
-    //             setCheck = null;
-    //         }
-    //     };
-    // }
 
     return (
         <div className="mt-44" id="faq">
@@ -58,19 +45,27 @@ const FAQ = () => {
 
             <div>
                 <div>
-                    <div className="w-full md:w-3/5 mx-auto p-8">
+                    <div className="w-full lg:w-4/5 xl:w-3/5 mx-auto p-8">
                         <div className="shadow-md">
                             {faqData.map(faq =>
-                                <div key={faq.id} className="tab w-full overflow-hidden text-left mt-5">
+                                <div key={faq.id} className="tab w-full text-left mt-5 relative">
                                     <input
                                         className="absolute opacity-0"
                                         id={`tab-multi-${faq.id}`}
                                         type="checkbox" name="tabs" />
                                     <label
-                                        className="block p-5 leading-normal cursor-pointer xs:text-sm lg:text-base"
+                                        className="block p-5 leading-normal cursor-pointer"
                                         htmlFor={`tab-multi-${faq.id}`}>
-                                        {faq.question}
+                                        <p className="questions xs:text-sm lg:text-base xs:pr-14 ">{faq.question}</p>
                                     </label>
+
+                                    <label htmlFor={`tab-multi-${faq.id}`}
+                                        className="absolute right-5 top-5 downArrow">
+                                        <img src={downArrow} alt="" className="w-5 " />
+                                    </label>
+
+
+
                                     <div className="tab-content overflow-hidden leading-normal">
                                         <p className="p-5 xs:text-xs lg:text-base">{faq.answere}</p>
                                     </div>
@@ -86,3 +81,41 @@ const FAQ = () => {
 };
 
 export default FAQ;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+ <div key={faq.id} className="tab w-full text-left mt-5">
+                                    <input
+                                        className="absolute opacity-0"
+                                        id={`tab-multi-${faq.id}`}
+                                        type="checkbox" name="tabs" />
+                                    <label
+                                        className="block p-5 leading-normal cursor-pointer xs:text-sm lg:text-base"
+                                        htmlFor={`tab-multi-${faq.id}`}>
+                                        {faq.question}
+                                    </label>
+                                    <div className="tab-content overflow-hidden leading-normal">
+                                        <p className="p-5 xs:text-xs lg:text-base">{faq.answere}</p>
+                                    </div>
+                                </div> */

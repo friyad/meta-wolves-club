@@ -16,6 +16,9 @@
     format("truetype"),
     url("./MiedingerFont/@font-face/39ef4ceef70c633f89f5149378665c70.svg#Miedinger")
     format("svg"); }
+html{
+  scroll-behavior: smooth;
+}
 
 body {
   margin: 0;

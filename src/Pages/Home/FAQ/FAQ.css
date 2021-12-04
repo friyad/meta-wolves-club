@@ -17,45 +17,45 @@ max-height: 100vh;
 }
 /* Label formatting when open */
 .tab input:checked + label{
-/*@apply text-xl p-5 border-l-2 border-indigo-500 bg-gray-100 text-indigo*/
-font-size: 1.25rem; /*.text-xl*/
-padding: 1.25rem; /*.p-5*/
-border-left-width: 2px; /*.border-l-2*/
-border-color: #6574cd; /*.border-indigo*/
-color: #6574cd; /*.text-indigo*/
-}
-/* Icon */
-.tab label::after {
-float:right;
-right: 0;
-top: 0;
-display: block;
-width: 1.5em;
-height: 1.5em;
-line-height: 1.5;
-font-size: 1.25rem;
-text-align: center;
--webkit-transition: all .35s;
--o-transition: all .35s;
-transition: all .35s;
-}
-/* Icon formatting - closed */
-.tab input[type=checkbox] + label::after {
-content: url(../../../images/icons/down-arrow.svg);
-font-weight:bold; /*.font-bold*/
+    /*@apply text-xl p-5 border-l-2 border-indigo-500 bg-gray-100 text-indigo*/
+    font-size: 1.25rem; /*.text-xl*/
+    padding: 1.25rem; /*.p-5*/
+    border-left-width: 2px; /*.border-l-2*/
+    border-color: #6574cd; /*.border-indigo*/
+    color: #6574cd; /*.text-indigo*/
 }
 
-.tab input[type=radio] + label::after {
-content: "\25BE";
-font-weight:bold; /*.font-bold*/
-border-width: 1px; /*.border*/
+.downArrow{
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #FF06AA;
+    -webkit-transition:all.35s;
+    -o-transition: all .35s;
+    transition: all .35s; 
 }
 
-/* Icon formatting - open */
-.tab input[type=checkbox]:checked + label::after {
-transform: rotate(180deg);
+.downArrow:hover{
+    box-shadow: 0px 0px 60px 0px rgba(255, 0, 191, 0.966);
+    background-color: #FF06AA;
 }
 
-.tab input[type=radio]:checked + label::after {
-transform: rotateX(180deg);
+.tab input:checked ~ .downArrow {
+    background-color: #FF06AA;
+    transform: rotate(180deg);
 }
+
+.questions:hover{
+    -webkit-transition:all.35s;
+    -o-transition: all .35s;
+    transition: all .35s; 
+    text-shadow: 2px 4px 30px rgba(113, 100, 252, 0.966),
+                 0px -5px 20px rgba(113, 100, 252, 0.966);
+}
+
+
+

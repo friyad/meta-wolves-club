@@ -37,9 +37,6 @@ height: 900px;
   }
  }
 
-
-
-
  
  .stickyHeader-enter {
   opacity: 0;
@@ -77,10 +74,29 @@ height: 900px;
 }
 
 
-.btnShadow{
-  background-color: #FF06AA;
-  box-shadow: 0px 15.6064px 58.9574px rgba(113, 100, 252, 0.3);
+/* Default Button Shadows------------- */
+.blueBtnShadow, .pinkBtnShadow, .orangeBtnShadow,.plushMinasBtnShadow{
+  -webkit-transition:all.4s;
+  -o-transition: all .4s;
+  transition: all .4s; 
 }
+
+.blueBtnShadow:hover{
+  box-shadow: 0px 0px 40px 0px rgba(113, 100, 252, 0.897);
+}
+.pinkBtnShadow:hover{
+  background-color: #FF06AA;
+  box-shadow: 0px 0px 40px 0px rgba(255, 0, 191, 0.966);
+}
+.orangeBtnShadow:hover{
+ box-shadow: 0px 0px 50px 0px #ff932fe1;
+}
+.plushMinasBtnShadow:hover{
+
+  background-color:#FF06AA ;
+   box-shadow: 0px 0px 40px 0px rgba(255, 0, 191, 0.966);
+}
+
 
 
 .roadMapList{
@@ -106,21 +122,19 @@ height: 900px;
 }
 
 
-
 @layer components{
     .mainNavStyle{
       @apply flex justify-between items-center lg:px-4 xl:px-8 2xl:px-0
     }
     .navAstyle{
-      @apply text-white hover:text-white rounded-full inline-block font-bold
-      2xl:px-4 2xl:py-4 
-      
+      @apply text-gray-200 hover:text-white rounded-full inline-block font-bold
+      2xl:px-4 2xl:py-4 cursor-pointer     
     }
     .socialIconStyle{
-      @apply p-3 rounded-full flex justify-center items-center
+      @apply p-3 rounded-full flex justify-center items-center cursor-pointer
     }
     .smallNavAStyle{
-      @apply text-white py-3 rounded-lg text-sm
+      @apply text-white py-3 rounded-lg text-sm cursor-pointer
     }
 }
 
@@ -148,14 +162,27 @@ height: 900px;
 
 
 .navAstyle{
-  transition: 0.5s;
+  -webkit-transition:all.5s;
+  -o-transition: all .5s;
+  transition: all .5s ease-in-out; 
 }
 .navAstyle:hover{
-    background-color: #03031C;
+  background-color: #FF06AA;
+  box-shadow: 0px 0px 20px 0px rgba(255, 0, 191, 0.966);
+}
+.navAstyle:active {
+background-color: #FF06AA;
+  box-shadow: 0px 0px 20px 0px rgba(255, 0, 191, 0.966);
 }
 
 
+
+.socialIconStyle{
+    -webkit-transition:all.4s;
+  -o-transition: all .4s;
+transition: all .5s ease-in-out; 
+}
 .socialIconStyle:hover{
-      background-color: #03031C;
-transition: 0.5s;
+     background-color: #FF06AA;
+  box-shadow: 0px 0px 20px 0px rgba(255, 0, 191, 0.966);
 }
