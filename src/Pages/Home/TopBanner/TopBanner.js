@@ -12,7 +12,7 @@ const TopBanner = () => {
                 xl:text-7xl
                 ">
                     meta <br />
-                    <p className="mt-5"> WOLves CLUB</p>
+                    <p className="mt-5"> WOLVES CLUB</p>
                 </h1>
                 <div className="xs:mt-4 md:mt-8 xl:mt-14">
                     <button
