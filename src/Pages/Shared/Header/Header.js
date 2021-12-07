@@ -61,13 +61,13 @@ const Header = () => {
                             <a className="navAstyle" onClick={() => goTo("#faq")}>FAQ</a>
                         </div>
                         <div className="flex mr-auto">
-                            <a href="#" className="socialIconStyle">
+                            <a href="https://twitter.com/MetaWolvesClub" target="_blank" rel="noreferrer" className="socialIconStyle">
                                 <img src={twitterIcon} alt="" className="lg:w-4 2xl:w-5" />
                             </a>
-                            <a href="#" className="socialIconStyle">
+                            <a href="https://linktr.ee/metawolvesclub" target="_blank" rel="noreferrer" className="socialIconStyle">
                                 <img src={discordIcon} alt="" className="lg:w-4 2xl:w-5" />
                             </a>
-                            <a href="#" className="socialIconStyle">
+                            <a href="https://www.instagram.com/metawolvesclub" target="_blank" rel="noreferrer" className="socialIconStyle">
                                 <img src={instragramIcon} alt="" className="lg:w-4 2xl:w-5" />
                             </a>
                         </div>
