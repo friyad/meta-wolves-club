@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
-import calenderIcon from '../../../images/icons/Calender.svg'
+// import calenderIcon from '../../../images/icons/Calender.svg'
+import EventIcon from '@material-ui/icons/Event';
 
 const JoinThePack = () => {
     const [timerDays, setTimerDays] = useState('00')
@@ -86,7 +87,8 @@ const JoinThePack = () => {
                     style={{ backgroundColor: '#FF06AA' }}
                 >Join the Whitelist</button>
                 <p className="font-abel text-lg mt-3 font-thin flex justify-center items-center mx-auto">
-                    <img src={calenderIcon} alt="" className="w-5 mr-3" />
+                    {/* <img src={calenderIcon} alt="" className="w-5 mr-3" /> */}
+                    <EventIcon className="w-5 mr-3" />
                     Add remainder to your calendar</p>
             </div>
 

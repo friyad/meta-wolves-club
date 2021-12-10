@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import logo from '../../../images/logo.png'
-import twitterIcon from '../../../images/icons/Twitter.png'
-import discordIcon from '../../../images/icons/Discord.png'
-import instragramIcon from '../../../images/icons/Instagram.png'
+// import twitterIcon from '../../../images/icons/Twitter.png'
+import TwitterIcon from '@material-ui/icons/Twitter';
+import discordIcon from '../../../images/icons/discord.svg'
+// import instragramIcon from '../../../images/icons/Instagram.png'
+import InstagramIcon from '@material-ui/icons/Instagram';
 import { CSSTransition } from 'react-transition-group';
 import closeIcon from '../../../images/icons/close.svg'
 
@@ -62,17 +64,22 @@ const Header = () => {
                         </div>
                         <div className="flex mr-auto">
                             <a href="https://twitter.com/MetaWolvesClub" target="_blank" rel="noreferrer" className="socialIconStyle">
-                                <img src={twitterIcon} alt="" className="lg:w-4 2xl:w-5" />
+                                {/* <img src={twitterIcon} alt="" className="lg:w-4 2xl:w-5" /> */}
+                                <TwitterIcon   className="lg:w-4 2xl:w-5" />
                             </a>
                             <a href="https://linktr.ee/metawolvesclub" target="_blank" rel="noreferrer" className="socialIconStyle">
                                 <img src={discordIcon} alt="" className="lg:w-4 2xl:w-5" />
                             </a>
                             <a href="https://www.instagram.com/metawolvesclub" target="_blank" rel="noreferrer" className="socialIconStyle">
-                                <img src={instragramIcon} alt="" className="lg:w-4 2xl:w-5" />
+                                {/* <img src={instragramIcon} alt="" className="lg:w-4 2xl:w-5" /> */}
+                                <InstagramIcon className="lg:w-4 2xl:w-5" />
                             </a>
                         </div>
                         <div>
-                            <button
+                            <a
+                                href="https://opensea.io/collection/metawolvesclub"
+                                target="_blank"
+                                rel="noreferrer"
                                 className="rounded-full font-abel
                                 lg:px-3 lg:py-1 lg:text-base
                                 xl:px-4 xl:text-lg
@@ -80,8 +87,8 @@ const Header = () => {
                                 blueBtnShadow
                                 "
                                 style={{ backgroundColor: '#2081E2' }}>
-                                Open Sea
-                            </button>
+                                OpenSea
+                            </a>
                             <button
                                 className="rounded-full  font-abel
                                lg:px-3 lg:py-1 lg:text-base lg:ml-3
@@ -138,23 +145,28 @@ const Header = () => {
                             <a className="smallNavAStyle" onClick={() => goTo("#faq")}>FAQ</a>
                             <div className="flex">
                                 <a href="#" className="smallNavAStyle mr-8">
-                                    <img src={twitterIcon} alt="" className="w-5" />
+                                    {/* <img src={twitterIcon} alt="" className="w-5" /> */}
+                                    <TwitterIcon className='w-5' />
                                 </a>
                                 <a href="#" className="smallNavAStyle mr-8">
                                     <img src={discordIcon} alt="" className="w-5" />
                                 </a>
                                 <a href="#" className="smallNavAStyle mr-8">
-                                    <img src={instragramIcon} alt="" className="w-5" />
+                                    {/* <img src={instragramIcon} alt="" className="w-5" /> */}
+                                    <InstagramIcon className='w-5' />
                                 </a>
                             </div>
                             <div>
-                                <button
+                                <a
+                                href="https://opensea.io/collection/metawolvesclub"
+                                target="_blank"
+                                rel="noreferrer"
                                     className="rounded-full font-abel blueBtnShadow
                               xs:px-2 sm:px-4 xs:py-2 md:px-8 md:text-xl  xs:text-xs sm:text-lg
                                 "
                                     style={{ backgroundColor: '#5317FF' }}>
-                                    Open Sea
-                                </button>
+                                    OpenSea
+                                </a>
                                 <button
                                     className="rounded-full font-abel xs:ml-2 md:ml-5 orangeBtnShadow
                               xs:px-2 sm:px-4 xs:py-2 md:px-8 md:text-xl xs:text-xs sm:text-lg
