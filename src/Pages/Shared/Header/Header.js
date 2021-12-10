@@ -136,14 +136,14 @@ const Header = () => {
                         style={{ backgroundColor: '#03031C', zIndex: 99999 }}>
 
                         <div className="flex flex-col space-y-3  text-left p-5 px-9 ">
-                            <a className="smallNavAStyle" onClick={() => goTo('#joinThePack')}>Buy a Wolf</a>
-                            <a className="smallNavAStyle" onClick={() => goTo("#theCWC")}>The CWC</a>
-                            <a className="smallNavAStyle" onClick={() => goTo("#rewards")}>REWARD</a>
-                            <a className="smallNavAStyle" onClick={() => goTo("#MeetTheWolves")}>Meet the Wolves</a>
-                            <a className="smallNavAStyle" onClick={() => goTo("#Roadmap")}>Roadmap</a>
-                            <a className="smallNavAStyle" onClick={() => goTo("#team")}>Team</a>
-                            <a className="smallNavAStyle" onClick={() => goTo("#faq")}>FAQ</a>
-                            <div className="flex">
+                            <a href="#joinThePack" className="smallNavAStyle" onClick={() => goTo('#joinThePack')}>Buy a Wolf</a>
+                            <a href="#theCWC" className="smallNavAStyle" onClick={() => goTo("#theCWC")}>The CWC</a>
+                            <a href="#rewards" className="smallNavAStyle" onClick={() => goTo("#rewards")}>REWARD</a>
+                            <a href="#MeetTheWolves" className="smallNavAStyle" onClick={() => goTo("#MeetTheWolves")}>Meet the Wolves</a>
+                            <a href="#Roadmap" className="smallNavAStyle" onClick={() => goTo("#Roadmap")}>Roadmap</a>
+                            <a href="#team" className="smallNavAStyle" onClick={() => goTo("#team")}>Team</a>
+                            <a href="#faq" className="smallNavAStyle" onClick={() => goTo("#faq")}>FAQ</a>
+                            <div className="flex" style={{alignItems: 'center'}}>
                                 <a href="#" className="smallNavAStyle mr-8">
                                     {/* <img src={twitterIcon} alt="" className="w-5" /> */}
                                     <TwitterIcon className='w-5' />

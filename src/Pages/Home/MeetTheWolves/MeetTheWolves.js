@@ -27,14 +27,14 @@ const MeetTheWolves = () => {
         setWindoWidth(window.innerWidth)
     }
 
-
+    const slidesPerView = windowWidth < 450 ? 1 : windowWidth < 768 ? 2 : 4;
     return (
         <div className="mt-24 xs:w-11/12 mx-auto" id="MeetTheWolves">
             <h1 className="xs:text-3xl lg:text-5xl font-bold font-miedinger m-0">MEET THE WOLVES</h1>
             <hr className="border-2 rounded-full w-52 mt-1 mx-auto" style={{ borderColor: '#7165FF' }} />
 
             <div className="mt-20">
-                <Swiper slidesPerView={windowWidth < 450 ? 1 : windowWidth < 768 ? 2 : 4} spaceBetween={5} slidesPerGroup={4} loop={true} loopFillGroupWithBlank={true} pagination={{
+                <Swiper slidesPerView={slidesPerView} spaceBetween={5} slidesPerGroup={slidesPerView} loop={true} loopFillGroupWithBlank={true} pagination={{
                     "clickable": true
                 }} navigation={true} className="mySwiper">
                     {wolfData.map(wolf =>
