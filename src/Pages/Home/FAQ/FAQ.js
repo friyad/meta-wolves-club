@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import './FAQ.css'
-// import downArrow from "../../../images/icons/down-arrow.svg"
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
+
 const FAQ = () => {
 
     const faqData = [
@@ -61,8 +62,7 @@ const FAQ = () => {
 
                                     <label htmlFor={`tab-multi-${faq.id}`}
                                         className="absolute right-5 top-3 downArrow">
-                                        {/* <img src={downArrow} alt="" className="w-5" /> */}
-                                        <ExpandMoreIcon className="w-24" />
+                                        <FontAwesomeIcon icon={faChevronDown} className="text-xl" />
                                     </label>
 
 

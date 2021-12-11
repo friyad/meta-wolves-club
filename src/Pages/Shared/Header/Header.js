@@ -1,12 +1,9 @@
 import React, { useState } from 'react';
 import logo from '../../../images/logo.png'
-// import twitterIcon from '../../../images/icons/Twitter.png'
-import TwitterIcon from '@material-ui/icons/Twitter';
-import discordIcon from '../../../images/icons/discord.svg'
-// import instragramIcon from '../../../images/icons/Instagram.png'
-import InstagramIcon from '@material-ui/icons/Instagram';
 import { CSSTransition } from 'react-transition-group';
-import closeIcon from '../../../images/icons/close.svg'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faDiscord, faInstagram, faTwitter } from '@fortawesome/free-brands-svg-icons';
+import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 
 const Header = () => {
     const [menuOpen, setMenuOpen] = useState(false)
@@ -64,15 +61,13 @@ const Header = () => {
                         </div>
                         <div className="flex mr-auto">
                             <a href="https://twitter.com/MetaWolvesClub" target="_blank" rel="noreferrer" className="socialIconStyle">
-                                {/* <img src={twitterIcon} alt="" className="lg:w-4 2xl:w-5" /> */}
-                                <TwitterIcon   className="lg:w-4 2xl:w-5" />
+                                <FontAwesomeIcon icon={faTwitter} className="lg:text-md 2xl:text-xl" />
                             </a>
                             <a href="https://linktr.ee/metawolvesclub" target="_blank" rel="noreferrer" className="socialIconStyle">
-                                <img src={discordIcon} alt="" className="lg:w-4 2xl:w-5" />
+                                <FontAwesomeIcon icon={faDiscord} className="lg:text-md 2xl:text-xl" />
                             </a>
                             <a href="https://www.instagram.com/metawolvesclub" target="_blank" rel="noreferrer" className="socialIconStyle">
-                                {/* <img src={instragramIcon} alt="" className="lg:w-4 2xl:w-5" /> */}
-                                <InstagramIcon className="lg:w-4 2xl:w-5" />
+                                <FontAwesomeIcon icon={faInstagram} className="lg:text-md 2xl:text-xl" />
                             </a>
                         </div>
                         <div>
@@ -113,8 +108,8 @@ const Header = () => {
                         <div>
                             <button onClick={() => setMenuOpen(!menuOpen)} className="text-white">
                                 {menuOpen
-                                    ? <img src={closeIcon} alt="" />
-                                    : <svg xmlns="http://www.w3.org/2000/svg" width="24" fill="rgb(255, 255, 255)" height="24" viewBox="0 0 24 24"><path d="M24 6h-24v-4h24v4zm0 4h-24v4h24v-4zm0 8h-24v4h24v-4z" /></svg>}
+                                    ? <FontAwesomeIcon icon={faTimes} className="text-3xl" />
+                                    : <FontAwesomeIcon icon={faBars} className="text-2xl" />}
                             </button>
                         </div>
                         <div className="flex-1 justify-center items-center flex">
@@ -143,24 +138,25 @@ const Header = () => {
                             <a href="#Roadmap" className="smallNavAStyle" onClick={() => goTo("#Roadmap")}>Roadmap</a>
                             <a href="#team" className="smallNavAStyle" onClick={() => goTo("#team")}>Team</a>
                             <a href="#faq" className="smallNavAStyle" onClick={() => goTo("#faq")}>FAQ</a>
-                            <div className="flex" style={{alignItems: 'center'}}>
-                                <a href="#" className="smallNavAStyle mr-8">
-                                    {/* <img src={twitterIcon} alt="" className="w-5" /> */}
-                                    <TwitterIcon className='w-5' />
+                            <div className="flex" style={{ alignItems: 'center' }}>
+                                <a href="https://twitter.com/MetaWolvesClub"
+                                    className="smallNavAStyle mr-8">
+                                    <FontAwesomeIcon icon={faTwitter} className="text-xl" />
                                 </a>
-                                <a href="#" className="smallNavAStyle mr-8">
-                                    <img src={discordIcon} alt="" className="w-5" />
+                                <a href="https://linktr.ee/metawolvesclub"
+                                    className="smallNavAStyle mr-8">
+                                    <FontAwesomeIcon icon={faDiscord} className="text-xl" />
                                 </a>
-                                <a href="#" className="smallNavAStyle mr-8">
-                                    {/* <img src={instragramIcon} alt="" className="w-5" /> */}
-                                    <InstagramIcon className='w-5' />
+                                <a href="https://www.instagram.com/metawolvesclub"
+                                    className="smallNavAStyle mr-8">
+                                    <FontAwesomeIcon icon={faInstagram} className="text-xl" />
                                 </a>
                             </div>
                             <div>
                                 <a
-                                href="https://opensea.io/collection/metawolvesclub"
-                                target="_blank"
-                                rel="noreferrer"
+                                    href="https://opensea.io/collection/metawolvesclub"
+                                    target="_blank"
+                                    rel="noreferrer"
                                     className="rounded-full font-abel blueBtnShadow
                               xs:px-2 sm:px-4 xs:py-2 md:px-8 md:text-xl  xs:text-xs sm:text-lg
                                 "
