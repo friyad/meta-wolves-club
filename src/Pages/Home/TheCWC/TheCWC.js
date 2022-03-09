@@ -1,6 +1,8 @@
 import React from 'react';
 
 const TheCWC = () => {
+
+
     return (
         <div className="mt-44" id="theCWC">
             <h1 className="xs:text-3xl lg:text-5xl font-bold font-miedinger m-0">THE CWC</h1>
